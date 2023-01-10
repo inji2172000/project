@@ -87,6 +87,28 @@ class Face_Recognition_System:
 
         b1_1=Button(bg_img,text="TRAIN DATA",cursor="hand2",font=("times new roman",15,"bold"),bg="black",fg="white")
         b1_1.place(x=200,y=580,width=220,height=40)
+       
+        #photos button
+        img8=Image.open(r"D:\project\images\5.png")
+        img8=img8.resize((220,220),Image.ANTIALIAS)
+        self.photoimg8=ImageTk.PhotoImage(img8)
+
+        b1=Button(bg_img,image=self.photoimg8,cursor="hand2")
+        b1.place(x=500,y=380,width=220,height=220)
+
+        b1_1=Button(bg_img,text="PHOTOS",cursor="hand2",font=("times new roman",15,"bold"),bg="black",fg="white")
+        b1_1.place(x=500,y=580,width=220,height=40)
+        
+        #developer button
+        img9=Image.open(r"D:\project\images\5.png")
+        img9=img9.resize((220,220),Image.ANTIALIAS)
+        self.photoimg9=ImageTk.PhotoImage(img9)
+
+        b1=Button(bg_img,image=self.photoimg9,cursor="hand2")
+        b1.place(x=800,y=380,width=220,height=220)
+
+        b1_1=Button(bg_img,text="DEVELOPER",cursor="hand2",font=("times new roman",15,"bold"),bg="black",fg="white")
+        b1_1.place(x=800,y=580,width=220,height=40)
 
         
 
