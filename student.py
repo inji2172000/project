@@ -59,6 +59,40 @@ class Student:
         f_lbl=Label(Left_frame,image=self.photoimg_left)
         f_lbl.place(x=5,y=0,width=685,height=130)
 
+
+        #current course
+        Current_course_frame=LabelFrame(Left_frame,bd=2,bg="white",relief=RIDGE,text="Current Course Information",font=("times new roman",18,"bold"))
+        Current_course_frame.place(x=10,y=135,width=680,height=150)
+         
+        
+        #Department
+        dep_label=Label(Current_course_frame,text="Department",font=("times new roman",18,"bold"),bg="white")
+        dep_label.grid(row=0,column=0,padx=10,sticky=W)
+
+        dep_combo=ttk.Combobox(Current_course_frame,font=("times new roman",12,"bold"),state="readonly")
+        dep_combo["values"]=("Select Department","BCA","BBA","B.COM")
+        dep_combo.current(0)
+        dep_combo.grid(row=0,column=1,padx=2,pady=10)
+        
+        
+        #Course
+        C_label=Label(Current_course_frame,text="Department",font=("times new roman",18,"bold"),bg="white")
+        C_label.grid(row=0,column=0,padx=10,sticky=W)
+
+        C_combo=ttk.Combobox(Current_course_frame,font=("times new roman",12,"bold"),state="readonly")
+        C_combo["values"]=("Select Department","BCA","BBA","B.COM")
+        C_combo.current(0)
+        C_combo.grid(row=0,column=1,padx=2,pady=10)
+        #Department
+        dep_label=Label(Current_course_frame,text="Department",font=("times new roman",18,"bold"),bg="white")
+        dep_label.grid(row=0,column=0,padx=10,sticky=W)
+
+        dep_combo=ttk.Combobox(Current_course_frame,font=("times new roman",12,"bold"),state="readonly")
+        dep_combo["values"]=("Select Department","BCA","BBA","B.COM")
+        dep_combo.current(0)
+        dep_combo.grid(row=0,column=1,padx=2,pady=10)
+
+
         
         #right label frame
         Right_frame=LabelFrame(main_frame,bd=2,bg="white",relief=RIDGE,text="Student Details",font=("times new roman",18,"bold"))
