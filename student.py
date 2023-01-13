@@ -76,21 +76,33 @@ class Student:
         
         
         #Course
-        C_label=Label(Current_course_frame,text="Department",font=("times new roman",18,"bold"),bg="white")
-        C_label.grid(row=0,column=0,padx=10,sticky=W)
+        Course_label=Label(Current_course_frame,text="Course",font=("times new roman",18,"bold"),bg="white")
+        Course_label.grid(row=0,column=0,padx=10,sticky=W)
 
-        C_combo=ttk.Combobox(Current_course_frame,font=("times new roman",12,"bold"),state="readonly")
-        C_combo["values"]=("Select Department","BCA","BBA","B.COM")
-        C_combo.current(0)
-        C_combo.grid(row=0,column=1,padx=2,pady=10)
-        #Department
-        dep_label=Label(Current_course_frame,text="Department",font=("times new roman",18,"bold"),bg="white")
-        dep_label.grid(row=0,column=0,padx=10,sticky=W)
+        Course_combo=ttk.Combobox(Current_course_frame,font=("times new roman",12,"bold"),state="readonly")
+        Course_combo["values"]=("Select Department","BCA","BBA","B.COM")
+        Course_combo.current(0)
+        Course_combo.grid(row=0,column=1,padx=2,pady=10)
 
-        dep_combo=ttk.Combobox(Current_course_frame,font=("times new roman",12,"bold"),state="readonly")
-        dep_combo["values"]=("Select Department","BCA","BBA","B.COM")
-        dep_combo.current(0)
-        dep_combo.grid(row=0,column=1,padx=2,pady=10)
+
+        #Year
+        year_label=Label(Current_course_frame,text="Year",font=("times new roman",18,"bold"),bg="white")
+        year_label.grid(row=0,column=0,padx=10,sticky=W)
+
+        year_combo=ttk.Combobox(Current_course_frame,font=("times new roman",12,"bold"),state="readonly")
+        year_combo["values"]=("Select Department","BCA","BBA","B.COM")
+        year_combo.current(0)
+        year_combo.grid(row=0,column=1,padx=2,pady=10)
+
+        
+        #Semester
+        sem_label=Label(Current_course_frame,text="Semester",font=("times new roman",18,"bold"),bg="white")
+        sem_label.grid(row=0,column=0,padx=10,sticky=W)
+
+        sem_combo=ttk.Combobox(Current_course_frame,font=("times new roman",12,"bold"),state="readonly")
+        sem_combo["values"]=("Select Department","BCA","BBA","B.COM")
+        sem_combo.current(0)
+        sem_combo.grid(row=0,column=1,padx=2,pady=10)
 
 
         
