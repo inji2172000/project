@@ -385,29 +385,29 @@ class Student:
                 if Update>0:
                     conn=mysql.connector.connect(host="localhost",username="root",password="rasiinma@123",database="face_recognition")
                     my_cursor=conn.cursor()
-                    my_cursor.execute("update student set Dep=%s,Course=%s,year=%s,semester=%s,student_id=%s,name=%s,division=%s,roll_no=%s,gender=%s,DOB=%s,email=%s,phone=%s,photosample=%s where student_id=%s",(
+                    my_cursor.execute("update student set Dep=%s,Course=%s,year=%s,semester=%s,name=%s,division=%s,roll_no=%s,gender=%s,DOB=%s,email=%s,phone=%s,photosample=%s where student_id=%s",(
 
-                                                                                                                                                                                            self.var_dep.get(),
-                                                                                                                                                                                            self.var_course.get(),
-                                                                                                                                                                                            self.var_year.get(),
-                                                                                                                                                                                            self.var_sem.get(),
-                                                                                                                                                                                            self.var_name.get(),                                                                                                                                                                                     self.var_name.get(),
-                                                                                                                                                                                            self.var_div.get(),
-                                                                                                                                                                                            self.var_roll.get(),
-                                                                                                                                                                                            self.var_gender.get(),
-                                                                                                                                                                                            self.var_dob.get(),
-                                                                                                                                                                                            self.var_email.get(),
-                                                                                                                                                                                            self.var_phone.get(),
-                                                                                                                                                                                            self.var_radio1.get(),
-                                                                                                                                                                                            self.var_id.get()
-                                                                                                                                                                                        ))
+                                                                                                                                                                                    self.var_dep.get(),
+                                                                                                                                                                                    self.var_course.get(),
+                                                                                                                                                                                    self.var_year.get(),
+                                                                                                                                                                                    self.var_sem.get(),
+                                                                                                                                                                                    self.var_name.get(),                                                                                                                                                                                     
+                                                                                                                                                                                    self.var_div.get(),
+                                                                                                                                                                                    self.var_roll.get(),
+                                                                                                                                                                                    self.var_gender.get(),
+                                                                                                                                                                                    self.var_dob.get(),
+                                                                                                                                                                                    self.var_email.get(),
+                                                                                                                                                                                    self.var_phone.get(),
+                                                                                                                                                                                    self.var_radio1.get(),
+                                                                                                                                                                                    self.var_id.get()
+                                                                                                                                                                                ))
                 else:
                     if not Update:
                         return
+                messagebox.showinfo("Success","Student details successfully updated",parent=self.root)        
                 conn.commit()
                 self.fetch_data()
                 conn.close()
-                messagebox.showinfo("Success","Student details successfully updated",parent=self.root)
             except Exception as es:
                 messagebox.showerror("Error",f"Due to:{str(es)}",parent=self.root)
 
